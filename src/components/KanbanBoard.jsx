@@ -1,6 +1,6 @@
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 import { useTasks } from "../context/TaskContext";
-import { updateTask } from "../services/TaskService";
+import { updateTask } from "../services/taskService";
 
 const statuses = ["POR_HACER", "EN_PROGRESO", "FINALIZADA"];
 

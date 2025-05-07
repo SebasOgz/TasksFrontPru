@@ -1,15 +1,15 @@
 import { useForm } from "react-hook-form";
-import { createTask } from "../services/taskService";
+import { createTask } from "../services/taskservice";
 import { useTasks } from "../context/TaskContext";
 
 export const TaskForm = () => {
   const { register, handleSubmit, reset } = useForm();
-  const { loadTasks } = useTasks();
+  // const { loadTasks } = useTasks();
 
   const onSubmit = async (data) => {
-    await createTask({ ...data, status: "TODO" });
+    await createTask({ ...data, status: "POR_HACER" });
     reset();
-    loadTasks();
+    // loadTasks();
   };
 
   return (
